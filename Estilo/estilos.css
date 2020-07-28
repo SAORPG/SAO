@@ -45,7 +45,7 @@ nav a{
 }
 
 .link{
-    background-color:  rgba(040,041,035,10%);;
+    background-color:  rgba(040,041,035,10%);
     padding: 20px;
     font-family: 'arial';
     font-size: 40px;
@@ -93,6 +93,7 @@ a#ai:hover{
 }
 
 body#home{
+    background-color:  rgb(040,041,035);
     background: url("../Imagens/Fundo.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
