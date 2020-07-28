@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*Css para Menu*/
+
+#check{
+    display: none;
+}
+
+#im{
+    width: 250%;
+}
+
+#icone{
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.barra{
+    background-color: rgba(051,051,051,50%);
+    height: 100%;
+    width:100%;
+    position: absolute;
+    transition: all .1s linear;
+    left: -1500px;
+     
+
+}
+
+nav{
+    width: 100%;
+    position:absolute;
+    top:60px;
+}
+
+nav a{
+    text-decoration: none;
+
+
+}
+
+.link{
+    background-color:  rgba(040,041,035,10%);;
+    padding: 20px;
+    font-family: 'arial';
+    font-size: 40px;
+    transition: all .1s linear; 
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+    opacity: 0;
+    margin-top: 200px; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.link:hover{
+    background-color: #050542;
+}
+
+#check:checked ~ .barra{
+
+    transform: translateX(1500px);
+
+}
+
+#check:checked ~ .barra nav a .link{
+
+    opacity: 100%;
+    margin-top: 0;
+    transition-delay: .2s;
+
+   
+
+}
+
+/*Fim menu*/
+
+/*Estilo da home*/
+
+a#ai{
+    color: yellow;
+    text-decoration: none;
+}
+
+a#ai:hover{
+    color: rgb(230,219,116);
+}
+
+body#home{
+    background: url("../Imagens/Fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+
+
+p{
+    text-align: justify;
+    padding-top: 15px;
+    font-size: 16pt;
+    color:rgb(235,235,235);
+    padding-right: 5%;
+    padding-left:  15%;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25pt;
+    color:rgb(210,235,000);
+}
+
+h2{
+     padding-left:  15%;
+    margin-top: 10px;
+    font-size: 24pt;
+    color:rgb(235,230,235);
+}
+
+h3{
+     padding-left:  15%;
+    margin-top: 10px;
+    font-size: 18pt;
+    color:purple;
+}
