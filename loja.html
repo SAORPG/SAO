@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Loja SAO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <style>
+
+        /* GLOBAL STYLES
+        -------------------------------------------------- */
+        /* Padding below the footer and lighter body text */
+    
+        body {
+          padding-bottom: 40px;
+          color: #5a5a5a;
+        }
+    
+    
+    
+        /* CUSTOMIZE THE NAVBAR
+        -------------------------------------------------- */
+    
+        /* Special class on .container surrounding .navbar, used for positioning it into place. */
+        .navbar-wrapper {
+          position: relative;
+          z-index: 10;
+          margin-top: 20px;
+          margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+        }
+    
+        /* Remove border and change up box shadow for more contrast */
+        .navbar .navbar-inner {
+          border: 0;
+          -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+             -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+                  box-shadow: 0 2px 10px rgba(0,0,0,.25);
+        }
+    
+        /* Downsize the brand/project name a bit */
+        .navbar .brand {
+          padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+          font-size: 16px;
+          font-weight: bold;
+          text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+        }
+    
+        /* Navbar links: increase padding for taller navbar */
+        .navbar .nav > li > a {
+          padding: 15px 20px;
+        }
+    
+        /* Offset the responsive button for proper vertical alignment */
+        .navbar .btn-navbar {
+          margin-top: 10px;
+        }
+    
+    
+    
+        /* CUSTOMIZE THE NAVBAR
+        -------------------------------------------------- */
+    
+        /* Carousel base class */
+        .carousel {
+          margin-bottom: 60px;
+        }
+    
+        .carousel .container {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+    
+        .carousel-control {
+          background-color: transparent;
+          border: 0;
+          font-size: 120px;
+          margin-top: 0;
+          text-shadow: 0 1px 1px rgba(0,0,0,.4);
+        }
+    
+        .carousel .item {
+          height: 500px;
+        }
+        .carousel img {
+          min-width: 100%;
+          height: 500px;
+        }
+    
+        .carousel-caption {
+          background-color: transparent;
+          position: static;
+          max-width: 550px;
+          padding: 0 20px;
+          margin-bottom: 100px;
+        }
+        .carousel-caption h1,
+        .carousel-caption .lead {
+          margin: 0;
+          line-height: 1.25;
+          color: #fff;
+          text-shadow: 2px 2px 6px rgba(0,0,0,.4);
+        }
+        .carousel-caption .btn {
+          margin-top: 10px;
+        }
+    
+    
+    
+        /* MARKETING CONTENT
+        -------------------------------------------------- */
+    
+        /* Center align the text within the three columns below the carousel */
+        .marketing .span4 {
+          text-align: center;
+        }
+        .marketing h2 {
+          font-weight: normal;
+        }
+        .marketing .span4 p {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+    
+    
+        /* Featurettes
+        ------------------------- */
+    
+        .featurette-divider {
+          margin: 80px 0; /* Space out the Bootstrap <hr> more */
+        }
+        .featurette {
+          padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+          overflow: hidden; /* Vertically center images part 2: clear their floats. */
+        }
+        .featurette-image {
+          margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+        }
+    
+        /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+        .featurette-image.pull-left {
+          margin-right: 40px;
+        }
+        .featurette-image.pull-right {
+          margin-left: 40px;
+        }
+    
+        /* Thin out the marketing headings */
+        .featurette-heading {
+          font-size: 50px;
+          font-weight: 300;
+          line-height: 1;
+          letter-spacing: -1px;
+        }
+    
+    
+    
+        /* RESPONSIVE CSS
+        -------------------------------------------------- */
+    
+        @media (max-width: 979px) {
+    
+          .container.navbar-wrapper {
+            margin-bottom: 0;
+            width: auto;
+          }
+          .navbar-inner {
+            border-radius: 0;
+            margin: -20px 0;
+          }
+    
+          .carousel .item {
+            height: 500px;
+          }
+          .carousel img {
+            width: auto;
+            height: 500px;
+          }
+    
+          .featurette {
+            height: auto;
+            padding: 0;
+          }
+          .featurette-image.pull-left,
+          .featurette-image.pull-right {
+            display: block;
+            float: none;
+            max-width: 40%;
+            margin: 0 auto 20px;
+          }
+        }
+    
+    
+        @media (max-width: 767px) {
+    
+          .navbar-inner {
+            margin: -20px;
+          }
+    
+    
+          .carousel {
+            margin-left: -20px;
+            margin-right: -20px;
+          }
+          .carousel .item {
+            height: 300px;
+          }
+          .carousel img {
+            height: 300px;
+          }
+          .carousel-caption {
+            width: 65%;
+            padding: 0 70px;
+            margin-bottom: 40px;
+          }
+          .carousel-caption h1 {
+            font-size: 30px;
+           
+          }
+          .carousel-caption .lead,
+          .carousel-caption .btn {
+            font-size: 18px;
+          }
+    
+          .marketing .span4 + .span4 {
+            margin-top: 40px;
+          }
+    
+          .featurette-heading {
+            font-size: 30px;
+          }
+          .featurette .lead {
+            font-size: 18px;
+            line-height: 1.5;
+          }
+    
+        }
+        </style>
+
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="bootstrap/img/i.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/img/i.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/img/i.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/img/i.jpg">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/img/i.jpg">
+  </head>
+
+  <body>
+
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
+   <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">SAO</a>
+            <div class="nav-collapse collapse">
+            <ul class="nav">
+          <li class="active"><a href="Index.html">Inicio</a></li>
+              <li><a href="loja.html">Loja</a></li>
+              <li><a href="#contact">Biblioteca</a></li>
+              <li><a href="#about">Classes</a></li>
+              <li><a href="#about">Spam</a></li>
+              <li><a href="#about">Perícias</a></li>
+              <li><a href="#about">Raças</a></li>
+              <li><a href="#about">Como jogar?</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+        <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="bootstrap/img/1.jpg" alt="Linda">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Veja a variação de itens da loja</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.carousel -->
+
+      <!-- START THE loja -->
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A1.png">
+        <h2 class="featurette-heading">Varinha Rubi.<span class="muted"> </span></h2>
+       
+        <p class="lead">Manipulação básico de chamas e emisão de luz ate 2 metros.</p><p class="lead">Esta varinha é um bastão de madeira escura de aproximadamente 40 cm de comprimento com detalhes bordados em metal. Sua pedra Rubi de mana contém um fluxo alto de magia correndo dentro de si, o que permite ao seu possuidor usufruir melhor de seus poderes.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A2.jpg">
+        <h2 class="featurette-heading">Katana Da Alvorada. <span class="muted"></span></h2>
+        <p class="lead">  Sua bainha é envergada e sua lâmina é unilateral, com aproximadamente 75cm de lâmina e uma bainha de 20cm. O material Utilizado para sua lâmina foi um tipo especial de ferro encantado, o qual permite que a pessoa execute movimentos com muito mais precisão e é mais resistente que o ferro comum. A precisão certeira dessa espada permite cortar até mesmo uma árvore com apenas um movimento, desde que executado corretamente.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A3.jpg">
+        <h2 class="featurette-heading">Martelo Abezethibou.<span class="muted"></span></h2>
+        <p class="lead">Este Martelo detém o nome de um dos Testamentos de Salomão, representando um dos Lordes Demônios, imperadores do inferno.</p><p class="lead"> Sua estrutura conta com um grande cabo esculpido de um metal moldado nas fornalhas infernais, com sua simbologia na "Face do Diabo" presente no topo do cabo, onde também é posta um grande cristal arroxeado, embuído de mana Demoníaco, onde, se você chegar perto do cristal, conseguirá ouvir os gritos das almas ali seladas.</p>
+        <p class="lead">Efeito: Aumenta a energia do possuidor em 3 pontos.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A4.jpg">
+        <h2 class="featurette-heading">Martelo Da Guerra.<span class="muted"> </span></h2>
+       
+    <p class="lead">Ares é o deus grego da guerra. Filho de Zeus e Hera, é um dos 12 deuses do Olimpo.Este martelo é embuido com uma pequena parcela da fúria deste deus, o que o torna poderoso e uma potente arma pesada. Seu cabo tem por volta de 90cm, com uma grande pedra de material desconhecido em sua ponta, de aproximadamente 60cm³..</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A5.jpg">
+        <h2 class="featurette-heading">Espada Sombria<span class="muted"></span></h2>
+        <p class="lead"> Ela é uma espada resistente e forte pode ser muito útil para matar monstros mas não tão boa pra enfrentar boos ou algum player</p>
+        
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A6.jpg">
+        <h2 class="featurette-heading">Lança De Bug<span class="muted"></span></h2>
+        <p class="lead"> Essa lança foi criada como um bug no jogo,ela é extremamente leve e sua velocidade se lançada é 3x mais rápida que uma normal.
+        </p>
+        <p class="lead">Efeito:Ela volta direto para mão do possuidor quando lançada. </p>
+        
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A7.jpg">
+        <h2 class="featurette-heading">Espada Das Almas <span class="muted"></span></h2>
+        <p class="lead"> Criada especialmente por Lucifer essa espada triplica o poder do player quando está em sua mão,sua lâmina é tão afiado que corta tudo oq tem pela frente.Lúcifer usava para castigar pecadores no inferno. </p>
+        <p class="lead">Para usá-la deve ter no mínimo 30 de força.</p>
+        
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A8.jpg">
+        <h2 class="featurette-heading">Foice Ceifeira <span class="muted"></span></h2>
+        <p class="lead"> Uma foice do tamanho médio com parte de aço e esmeralda,completamente afiada e resistente podendo cortar uma rocha de 5 metros facilmente. </p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A9.jpg">
+        <h2 class="featurette-heading">Arreios De Ponta Tripla<span class="muted"></span></h2>
+        <p class="lead"> Podendo desferir um ataque triplo com suas massas composta por uma esfera de metal maciço com espinhos, presa diretamente a um cabo ou pendurada por uma corrente.</p>
+        <p class="lead">Cada Esfera Possuir 5 de força, dando um combo de 3 Golpes 15 de dano</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A10.jpg">
+        <h2 class="featurette-heading">Katana De Ferro Puro<span class="muted"></span></h2>
+        <p class="lead">Uma katana de ferro puro,ela é uma katana normal sem nada de especial,mas consegue causar danos a monstros,bosses e animais.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A11.jpg">
+        <h2 class="featurette-heading">Escudo Dos Deuses<span class="muted"></span></h2>
+        <p class="lead"> Este é um escudo abençoado pelos deuses,ele te dará 20 de resistência quando estiver o usando além daprópria proteção doEste mesmo.O escudo é super resistente e diria que inquebrável ou quase.
+        </p>
+        <p class="lead">Deve ter no mínimo 25 de energia para usá-lo.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A12.jpg">
+        <h2 class="featurette-heading">Escudo Castor<span class="muted"></span></h2>
+        <p class="lead">Esse escudo é muito forte resistente forjado a partir de um minério incomum.Ele consegue aguentar uns 3 golpes de um boss do primeiro mapa. </p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A13.jpg">
+        <h2 class="featurette-heading">Escudo De Ferro<span class="muted"></span></h2>
+        <p class="lead">É um escudo normal de ferro,não tem muito em especial,mas ele consegue aguentar 1 golpe de um boss do primeiro mapa.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A14.jpg">
+        <h2 class="featurette-heading">Espada De Zeus<span class="muted"></span></h2>
+        <p class="lead">Essa espada é extremamente poderosa podendo usar o elemento raio como como bem entender,tendo o poder de gerar um raio do céu no lugar que deseja,só pode ser gerado 2 raios num único dia,ela também tem o poder de manipular o clima podendo gerar um clima chuvoso ou caloroso.</p>
+        <p class="lead">Efeito:Manipulação do clima,raios do céu e raios normais.</p>
+        <p class="lead">Para usá-la o player deve ter no mínimo 30 pontos de atributos em energia e 30 em mana.</p>
+      </div>
+
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A15.jpg">
+        <h2 class="featurette-heading">Royal Demon Rose<span class="muted"></span></h2>
+        <p class="lead">A foice criada por um ferreiro treinado pelos Deuses por ser digno de tal ato,ele conseguiu amplificar um grande poder envolvendo magia a mais pura magia da natureza humana, sendo assim o ataque dessa foice tem o dobro de poder a quem a empunha-la, podendo realizar "cortes" no ar de tal forma com um tanto de maestria, ela foi feita de minérios scarlates quase impossíveis de se encontrar, enquanto a mesma possui uma lâmina bastante afiada,um corte liso que não existe explicação, até mesmo um arcanjo teme o poder dessa foice forjado pelo ferreiro.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A16.jpg">
+        <h2 class="featurette-heading">Adaga De Domador<span class="muted"></span></h2>
+        <p class="lead">Seu formato não a torna uma arma muito efetiva, mas sim muito ágil, a qual consegue se destacar por serem feitas muitas táticas e manobras diferentes para diferentes usos. É mais resistente que pedra, porém seu material não é superior ao ferro, com 15cm de lâmina e certa leveza devido ao tamanho. </p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A17.jpg">
+        <h2 class="featurette-heading">Espada Salamandra<span class="muted"></span></h2>
+        <p class="lead"> Essa espada é feita de pedra,mas não se engane ela consegue se desdobrar como player quiser.Ótima pra fazer emboscadas surpresas.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A18.jpg">
+        <h2 class="featurette-heading">Cavalo<span class="muted"></span></h2>
+        <p class="lead">O cavalo é uma montaria do rpg,ele é mais rápido que um camelo.Montarias são muito requisitadas caso queira ir em algum lugar mais rápido</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A19.jpg">
+        <h2 class="featurette-heading">Camelo<span class="muted"></span></h2>
+        <p class="lead">O camelo é uma montaria do rpg,não é tão inteligente quanto o cavalo,porém é bem mais inteligente.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A20.jpg">
+        <h2 class="featurette-heading">Espada Serpente<span class="muted"></span></h2>
+        <p class="lead">Parece ser uma espada de pedra normal,mas ela consegue se destender com correntes aumentando seu alcance e tamanho,ótima para domadores de bestas.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A21.jpg">
+        <h2 class="featurette-heading">Espada Da Morte<span class="muted"></span></h2>
+        <p class="lead">Essa espada é feita de 3 camadas de ferro negro,ela é muito forte mesmo e ainda tem um gancho ligado por corrente tudo feito de ferro negro para destruir qualquer tipo de adversário.
+        </p>
+        <p class="lead">Para usá-la deve-se ter 30 pontos em força.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A22.jpg">
+        <h2 class="featurette-heading">Adaga Rubi<span class="muted"></span></h2>
+        <p class="lead">UEssa adaga é extremamente afiada,o lugar que ela corta dá duas vezes mais mais dano fazendo com que o corte seja bem profundo.</p>
+        <p class="lead">Efeito:Dobro de dano</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A23.jpg">
+        <h2 class="featurette-heading">Cajado Demoníaco<span class="muted"></span></h2>
+        <p class="lead">Um cajado para magos,ele foi forjado nas profundezas do inferno.Ele tem os poderes de te deixar invisível durante 1 hora(1 cena) e ter uma habilidade média de dominar raios.</p>
+        <p class="lead">Sua habilidade de invisibilidade só pode ser usada 1 vez por dia e caso o player tenha 25 pontos em mana.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A24.jpg">
+        <h2 class="featurette-heading">Espada Selvagem<span class="muted"></span></h2>
+        <p class="lead">É uma espada feita de cobre,cipós e outros materiais,mais forte que a espada inicial mas não tão quanto uma de ferro.Deve ser usada com cuidado.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A25.jpg">
+        <h2 class="featurette-heading">Espada Do Vampiro Rei<span class="muted"></span></h2>
+        <p class="lead">Pertencia a o antigo rei dos vampiros,após ser derrotado em uma luta intensa contra lobisomens sua espada foi perdida pelo mundo,até que uma velha ferreira a achou e está a vendendo no mercado negro.Esssa espada é exclusiva para a raça de vampiro,sua lâmina é feita de rubi.</p>
+        <p class="lead">Efeito:Se uma gota de sangue toca a lâmina ela fica uma cor brilhante e triplica um dano normal.</p>
+        <p class="lead">Para usá-la deve ser um vampiro de level alto,no mínimo level 15.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A26.jpg">
+        <h2 class="featurette-heading">Arco Angélico<span class="muted"></span></h2>
+        <p class="lead">Esse arco é muito poderoso,tão resistente quanto diamante,quando sua flecha é atirada em algum lugar esse lugar é explodido automaticamente.Foi criado pelas mãos de Artemis para matar Hercules enquanto dormia sem ser percebido.Agora esta a venda no mercado negro.</p>
+        <p class="lead">Efeito:Explosão automática.</p>
+        <p class="lead">Para usá-lo deve ter no minimo 25 de inteligência.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A27.png">
+        <h2 class="featurette-heading">Cajado Selvagem<span class="muted"></span></h2>
+        <p class="lead">Um cajado feito de uma madeira selvagem que aumenta um pouco mais os poderes de um cajado normal.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A28.jpg">
+        <h2 class="featurette-heading">Arco Arcaico<span class="muted"></span></h2>
+        <p class="lead">Esse arco é feito de ferro e madeira,ele se destaca em sua linha que é extremamente resistente podendo atirar flechas de ferro negro na velocidade de uma normal.</p>
+            <p class="lead"> Há boatos que um arqueiro que o possuia conseguiu derrotar 1 boss junto com seus amigos ao possuir este arco.</p>
+        <p class="lead">Efeito: Linha super resistente</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="bootstrap/img/A29.png">
+        <h2 class="featurette-heading">Foice Corrente<span class="muted"></span></h2>
+        <p class="lead">Suas correntes de aço foram banhadas em uma água purificada por magos, os quais puseram um encantamento nesta foice. O comprimento normal da corrente é por volta de 2m e a foice tem um tamanho de 67cm.</p>
+        <p class="lead">Efeito: A corrente consegue se estender em até 5m de distância.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="bootstrap/img/A30.png">
+        <h2 class="featurette-heading">Espada Tripla<span class="muted"></span></h2>
+        <p class="lead">Essa espada é dividida em 3 lâminas,a normal,ela souta e por baixo de tudo uma bem fina.É feita de platina.Ela era uma das armas mais utilizadas entre alguns espíritos e monstros que utilizavam armas para atacar.</p>
+      </div>
+
+      
+
+      <!-- /END THE FEATURETTES -->
+
+
+      </body>
+      </html>
